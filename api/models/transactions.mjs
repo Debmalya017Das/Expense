@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 const Transactionschema = new Schema({
 
@@ -8,6 +8,6 @@ const Transactionschema = new Schema({
     date: {type: Date, required: true},
 });
 
-const transactionmodel = model('transaction', Transactionschema);
+const transactionmodel = model('transactions', Transactionschema);
 
-module.exports = transactionmodel;
+export default transactionmodel;
